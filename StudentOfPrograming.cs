@@ -11,20 +11,6 @@ namespace lab_3
             Intelligence = 100;
         }
 
-        public void Sleep()
-        {
-            SleptWell = true;
-        }
-
-        public void Sleep(int hours)
-        {
-            SleptWell = true;
-            if (hours > 8)
-            {
-                Intelligence++;
-            }
-        }
-        
         private int _numberOfPrograms;
 
         public void WriteProgram()
@@ -44,7 +30,23 @@ namespace lab_3
             }
         }
 
-        public void PrintInfo()
+        public override void Ability()
+        {
+            if (Intelligence >= 105)
+            {
+                Console.WriteLine("\n*********************************");
+                Console.WriteLine("WOW! You hack the Pentagon");
+                Console.WriteLine("*********************************\n");
+            }
+            else
+            {
+                Console.WriteLine("\n*********************************");
+                Console.WriteLine("You don't have enough intelligence");
+                Console.WriteLine("*********************************\n");
+            }
+        }
+
+        public override void PrintInfo()
         {
             Console.WriteLine("*********************************");
             Console.WriteLine($"Student : {Name} {Lastname}");
@@ -57,6 +59,8 @@ namespace lab_3
             Console.WriteLine("*********************************"); 
         }
     }
+    
+    
     public class Students
     {
         private List<StudentOfPrograming> students = new List<StudentOfPrograming>();
