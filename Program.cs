@@ -6,8 +6,8 @@
         {
             var student1 = new StudentOfPrograming();
             var student2 = new Student();
-            student2.Name = "Vlad";
-            student2.Lastname = "Jameson";
+            student2.Name = "Alex";
+            student2.Lastname = "German";
             student2.Group = 503505;
             student2.PrintInfo();
             for (int i = 0; i < 7; i++)
@@ -24,6 +24,12 @@
             student1.WriteProgram();
             student1.PrintInfo();
             student1.Ability();
+            Student student = new StudentOfPrograming();
+            for (int i = 0; i < 10; i++)
+            {
+                student.Sleep(10);
+            }
+            student.Ability();
             var students = new Students();
             students[0] = student1;
             students[0].Sleep();
